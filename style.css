@@ -1,0 +1,64 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+    background-color: #3498db;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.square:hover {
+    transform: scale(1.05);
+}
+
+.text {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+}
+
+.image-container {
+    display: none;
+}
+
+.image-container.visible {
+    display: block;
+    max-width: 100%;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Адаптивность для телефонов */
+@media (max-width: 600px) {
+    .square {
+        width: 150px;
+        height: 150px;
+    }
+    .text {
+        font-size: 1.5em;
+    }
+}
